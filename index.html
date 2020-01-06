@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>#JovensFortes</title>
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">AD Brás Campina Grande | #JovensFortes</a>
+            <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #191140">
+                    <a class="navbar-brand" href="/">
+                      Home
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -16,23 +19,30 @@
                     <div class="collapse navbar-collapse" id="navbarsExample01">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#/home">Quem Somos?<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#/login">Login<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link" href="#/home">O que fazemos?<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#about">Quem somos<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#wedo">O que fazemos<span class="sr-only">(current)</span></a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#/projeto" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O Projeto</a>
                           <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="#/projeto-1">Projeto 1</a>
                             <a class="dropdown-item" href="#/projeto-2">Projeto 2</a>
                             <a class="dropdown-item" href="#/projeto-3">Projeto 3</a>
                           </div>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#/cadastro">Cadastre-se agora!</a>
+                        </li> -->
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#/register">Cadastre-se agora!</a>
                         </li>
                       </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                      </form>
                     </div>
                   </nav>
     </header>
@@ -94,7 +104,7 @@
       <hr>
 
       <!-- Aqui é a home, colocar informações gerais sobre os projetos que estão em desenvolvimento. Descrever um pouco sobre eles e adicionar fotos referentes a ele -->
-      <div class="container marketing">
+      <div class="container marketing" data-spy="scroll" data-target="#navbar" data-offset="0">
     
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -125,11 +135,11 @@
     
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 id="about" class="featurette-heading">Quem somos? <span class="text-muted">Além de #JovensFortes, somos:</span></h2>
+            <p class="lead">Fazer um textinho top, informando todos os detalhes do grupo.</p>
           </div>
           <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <img src="https://www.contadoragora.com/wp-content/uploads/2019/10/quem-somos-empresa-de-marketing-contabil.png" class="img-fluid" alt="Imagem responsiva">
           </div>
         </div>
     
@@ -137,11 +147,12 @@
     
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 id="wedo" class="featurette-heading">O que fazemos? <span class="text-muted">Contribuindo para o crescimento do Reino de Deus.</span></h2>
+            <p class="lead">Fazer outro textinho top, para exibir o que fazemos. Colocar informações sobre os projetos e links para mais detalhes sobre cada um.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <img src="https://www.contadoragora.com/wp-content/uploads/2019/10/quem-somos-empresa-de-marketing-contabil.png" class="img-fluid" alt="Imagem responsiva">
+            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
           </div>
         </div>
     
@@ -166,8 +177,8 @@
     
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p class="float-right"><a href="/">Back to top</a></p>
+        <p>© 2020 Euclides Ramos, @diga.comunicacao · <a href="https://www.instagram.com/diga.comunicacao/">Instagram</a> · <a href="/">Feedback</a></p>
       </footer>
     </main>
 
@@ -176,7 +187,7 @@
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

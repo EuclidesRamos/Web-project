@@ -1,5 +1,12 @@
 const app = require('./config/server.js');
-require('./config/database.js');
+const database = require('./config/database.js');
+
+const home = require('./routing/home.js');
+const login = require('./routing/login.js');
+const register = require('./routing/register.js');
+const about = require('./routing/about.js');
+const wedo = require('./routing/wedo.js');
+
 
 
 // Em andamento
