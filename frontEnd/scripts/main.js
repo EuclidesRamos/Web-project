@@ -1,30 +1,63 @@
 let $main = document.querySelector("main");
 
 function home() {
-    console.log("2");
     $main.innerHTML = templateHome.innerHTML;
 
-    let buttonLogin = document.querySelector("#login");
-    buttonLogin.addEventListener('click', login);
+    document.querySelector("#projeto1").addEventListener('click', projeto1);
+    document.querySelector("#projeto2").addEventListener('click', projeto2);
+
+    document.querySelector("#carousel1").addEventListener('click', register);
+    document.querySelector("#carousel2").addEventListener('click', projeto3);
+    document.querySelector("#carousel3").addEventListener('click', projeto3);
 }
 
 function login() {
     $main.innerHTML = templateLogin.innerHTML;
 }
 
+function register() {
+    $main.innerHTML = templateRegister.innerHTML;
+}
+
+function projeto1() {
+    $main.innerHTML = '<div class="pt-3">Em construção...</div>';
+}
+
+function projeto2() {
+    $main.innerHTML = '<div class="pt-3">Em construção...</div>';
+}
+
+function projeto3() {
+    $main.innerHTML = '<div class="pt-3">Em construção...</div>';
+}
+
+function feedback() {
+    $main.innerHTML = '<div class="pt-3">Em construção...</div>';
+}
+
+ 
 (async function init() {
 
     await Promise.all([fetchTemplates()]);
-
+    await configButtons();
+    
     let hash = location.hash;
-    console.log(templateHome.innerHTML);
-
+    
     if (["", "#"].includes(hash)) {
         home();
     } else if (["#/login"].includes(hash)) {
         login();
     } else if (["#/register"].includes(hash)) {
         register();
+    } else if (["#/santos_e_soldados"].includes(hash)) {
+        projeto1();
+    } else if (["#/feminino"].includes(hash)) {
+        projeto2();
+    } else if (["#/about", "#/wedo", "#/localization"].includes(hash)) {
+        location.hash = "";
+        home();
+    } else if (["#/feedback"].includes(hash)) {
+        feedback();
     }
 }());
 
@@ -37,4 +70,12 @@ async function fetchTemplates() {
     templateHome = e.querySelector("#home");
     templateLogin = e.querySelector("#login");
     templateRegister = e.querySelector("#register");
+}
+
+function configButtons() {
+    let buttonLogin = document.querySelector("#login");
+    buttonLogin.addEventListener('click', login);
+
+    let buttonRegister = document.querySelector("#register");
+    buttonRegister.addEventListener('click', register);
 }
