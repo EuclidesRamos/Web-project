@@ -1,4 +1,5 @@
 let $main = document.querySelector("main");
+const URL = "";
 
 function home() {
     $main.innerHTML = templateHome.innerHTML;
@@ -13,10 +14,14 @@ function home() {
 
 function login() {
     $main.innerHTML = templateLogin.innerHTML;
+
+    document.querySelector("#loginSend").addEventListener('click', fetchLogin);
 }
 
 function register() {
     $main.innerHTML = templateRegister.innerHTML;
+
+    document.querySelector("#registerSend").addEventListener('click', fetchRegister);
 }
 
 function projeto1() {
@@ -35,7 +40,6 @@ function feedback() {
     $main.innerHTML = '<div class="pt-3">Em construção...</div>';
 }
 
- 
 (async function init() {
 
     await Promise.all([fetchTemplates()]);
